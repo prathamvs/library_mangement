@@ -1,0 +1,205 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>library</title>
+
+    <!-- font awesome cdn link  -->
+    {% comment %} <link rel="stylesheet" href="{% static 'https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' %}"> {% endcomment %}
+    
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <a href="#" class="logo">
+            <img src="{%static 'images/logo5.png' %}" alt="">
+        </a>
+
+        <nav class="navbar">
+            <a href=" ">home</a>
+            <a href="#about">About</a>
+            <a href="#products">Books</a>
+            <a href="#review">Student's review</a>
+        </nav>
+        <div class="button">
+            <a href="login"><button class='loginbtn btn'
+                    onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">
+                    Login</button></a>
+        </div>
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3>library<br>Management<br>System</h3>
+            <a href="#" class="btn">LOGIN</a>
+        </div>
+
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- about section starts  -->
+
+    <section class="about" id="about">
+
+        <h1 class="heading"> <span>about</span> us </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="{%static 'images/about.jpg' %}" alt="">
+            </div>
+
+            <div class="content">
+
+                <p>Library management system is a project which aims in developing a computerized system to maintain all
+                    the daily work of library .This project has many features which are generally not available in
+                    normal library management systems like facility of user login and a facility of admin login .It also
+                    has a facility of admin login through which the admin can monitor the whole system . It has also a
+                    facility where student after logging in their accounts can see list of books issued and its issue
+                    date and return date.</p>
+                <!-- <a href="#" class="btn">learn more</a> -->
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- about section ends -->
+
+
+    <!-- Books section start -->
+
+    <section class="products" id="products">
+
+        <h1 class="heading"> our <span>Books</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{%static 'images/the immortal of meluha.jpg' %}" alt="COVERPAGE OF BOOK">
+                </div>
+                <div class="content">
+                    <h3>THE IMMORTALS OF MELUHA </h3>
+                    <h5>Series name - Shiva Trilogy</h5>
+                    <h5>Author name - Amish Tripathi</h5>
+                    <h5>Library number - 101</h5>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{%static 'images/the secret of the nagas.jpg' %}" alt="COVEERPAGE OF BOOK">
+                </div>
+                <div class="content">
+                    <h3>SECRET OF THE NAGAS</h3>
+                    <h5>Series name - Shiva Trilogy</h5>
+                    <h5>Author name - Amish Tripathi</h5>
+                    <h5>Library number - 102</h5>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{%static 'images/the oath of the vayuputras.jpg' %}" alt="COVERPAGE OF BOOK">
+                </div>
+                <div class="content">
+                    <h3>THE OATH OF THE VAYUPUTRAS </h3>
+                    <h5>Series name - Shiva Trilogy</h5>
+                    <h5>Author name - Amish Tripathi</h5>
+                    <h5>Library number - 103</h5>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+            <a href="#" class="fab fa-pinterest"></a>
+        </div>
+
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Books</a>
+            <a href="#">Issued Books</a>
+            <a href="#">Studant's review</a>
+            <a href="#">Accout</a>
+        </div>
+
+        <div class="credit">created by <span>us</span> | all rights reserved</div>
+
+    </section>
+
+    <!-- footer section ends -->
+
+
+
+
+    <!-- custom js file link  -->
+    {% comment %} <script src="{%static 'js/script.js' %}"></script> {% endcomment %}
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>library</title>
+
+    <!-- font -->
+    {% comment %} <link rel="stylesheet" href="{%static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css' %}"> {% endcomment %}
+
+    <!-- css file -->
+    <link rel="stylesheet" href="{%static 'css/login.css' %}">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+
+    <a href="#" class="logo">
+        <img src="{%static 'images/logo5.png' %}" alt="">
+    </a>
+
+    <nav class="navbar">
+        <a href=" ">Home</a>
+        <a href="#about">About</a>
+        <a href="#products">Books</a>
+        <a href="#review">Studant's review</a>
+        <a href="#contact">Account</a>
+    </nav>
+    <div class="button">
+        <button class='loginbtn btn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Login</button>
+    </div>
+    
+</header>
+
+<!-- header section ends -->
+
+<!-- login section starts  -->
+
+<section class="home" id="home">
+
+    <div id='login-form'class='login-page'>
+        <div class="form-box">
+            <div class='button-box'>
+                <div id='btn'></div>
+                <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
+
+                <button type='button'onclick='register()'class='toggle-btn'>Register</button>
+            </div>
+            <form id='login' class='input-group-login'>
+                <input type='text'class='input-field'placeholder='Email Id' required >
+        <input type='password'class='input-field'placeholder='Enter Password' required>
+        <input type='checkbox'class='check-box'><span>Remember Password</span>
+        <button type='submit'class='submit-btn'>Log in</button>
+     </form>
+     <form id='register' class='input-group-register'>
+         <input type='text'class='input-field'placeholder='First Name' required>
+         <input type='text'class='input-field'placeholder='Last Name ' required>
+         <input type='email'class='input-field'placeholder='Email Id' required>
+         <input type='password'class='input-field'placeholder='Enter Password' required>
+         <input type='password'class='input-field'placeholder='Confirm Password'  required>
+         <input type='checkbox'class='check-box'><span>I agree to the terms and conditions</span>
+                <button type='submit'class='submit-btn'>Register</button>
+         </form>
+        </div>
+    </div>
+
+
+</section>
+
+
+
+
+<!-- js file   -->
+<script>
+    var x=document.getElementById('login');
+    var y=document.getElementById('register');
+    var z=document.getElementById('btn');
+    function register()
+    {
+        x.style.left='-400px';
+        y.style.left='50px';
+        z.style.left='110px';
+    }
+    function login()
+    {
+        x.style.left='50px';
+        y.style.left='450px';
+        z.style.left='0px';
+    }
+</script>
+<script>
+    var modal = document.getElementById('login-form');
+    window.onclick = function(event) 
+    {
+        if (event.target == modal) 
+        {
+            modal.style.display = "block";
+        }
+    }
+</script>
+</body>
+</html>
